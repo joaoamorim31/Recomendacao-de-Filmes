@@ -1,0 +1,295 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:linear-gradient(333.52deg, #000235 24.58%, #010f42 44.55%, #e40913 104.96%);
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.4;
+}
+
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;
+}
+
+/* Logo */
+#logo {
+    max-width: 150px;
+
+}
+
+/* Menu */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+ 
+}
+
+
+.but {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa-txt {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+.search-btn img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Nav */
+#nav {
+    display: flex;
+    align-items: center; 
+    
+}
+
+#nav select {
+    margin-right: 10px;
+}
+
+
+
+
+/* Main */
+#main {
+    text-align: center;
+    margin: 20px 0;
+    
+}
+
+.subtitle-main {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.descricao {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+
+/* Catalogo */
+#box-container {
+    margin: 20px 0;
+}
+
+.box-catalogo1 {
+    margin-bottom: 20px;
+}
+.box-catalogo2 {
+    margin-bottom: 20px;
+}
+
+.title-film {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.car{
+    display: flex;
+    ;
+}
+
+/* Estilos de card para os filmes e séries */
+#film, #series {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imagens {
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Efeito hover no card */
+.imagens:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Shadows */
+.shadow, .shadow2, .shadow3 {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/*Sistema de avalição*/
+.avaliacao{
+    display: flex;
+   }
+  .star-icon{
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 20px;/* alterar o tamanho das estrelas */
+    border: 0;
+  }
+  .star-icon::before{
+  content: "\2605";
+}
+    .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+}
+    .avaliacao:hover .star-icon::before{
+    content: "\2605";
+}
+    .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+}
+
+.favorite-btn{
+    display: flex;
+    
+}
+/*botao de favoritos*/
+.favorite-btn{
+    color: white;
+    background-color: rgb(56, 30, 200);
+    border: 1px solid black;
+    cursor: pointer;
+    
+}
+
+
+/* Estiliza o container do filtro */
+#filter {
+    display: flex;
+    align-items:center;
+    width: 35%;
+    gap: 0px;
+    padding: 10px;
+    background:linear-gradient(333.52deg, #000235 24.58%, #e40913 104.96%);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px ;
+
+    
+}
+
+
+/* Estiliza o rótulo do filtro */
+#filter label {
+    font-size: 12px;
+    color: white;
+    margin-right: 10px;
+    
+}
+
+/* Estiliza o select */
+#filter select {
+    font-size: 10px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #8588dd;
+    cursor: pointer;
+    transition: border-color 0.7s ease;
+}
+
+/* Estiliza o select quando o foco está ativo */
+#filter select:focus {
+    border-color: red;
+    outline: none;
+}
+
+/* Estiliza as opções do select */
+#filter option {
+    padding: 5px;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu {
+        justify-content: center;
+    }
+
+    .but {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .pesquisa-txt {
+        width: 200px;
+    }
+
+    #lacasa {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .subtitle-main {
+        font-size: 1.5rem;
+    }
+
+    .descricao {
+        font-size: 1rem;
+    }
+
+    .imagens {
+        width: 120px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    #menu, #filter {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .pesquisa-txt {
+        width: 150px;
+    }
+
+    .imagens {
+        width: 100px;
+        height: 150px;
+    }
+}

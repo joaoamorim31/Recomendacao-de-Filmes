@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Filmes</title>
+    
+</head>
+<body>
+    <div id="container">
+        
+        <!-- Header -->
+        <div id="header">
+            <!-- Menu -->
+            <div id="menu">   
+                <img src="./assets/icon/Logo.png" id="logo">
+                <button class="but">Home</button>
+                <button class="but">Filmes</button>
+                <button class="but">TV Shows</button>
+                <button class="but">Assistidos</button>
+                <button class="but">Minha Lista</button>
+            </div>
+
+            <!-- Pesquisa -->
+            <div class="pesquisa">
+                <input type="text" class="pesquisa-txt" placeholder="Pesquisar">
+                <a href="#" class="search-btn">
+                    <img src="./assets/icon/lupaa.svg" alt="lupa" height="20" width="20">
+                </a>
+            </div>
+
+            <!-- Nav -->
+            <div id="nav">
+                <select>
+                    <option>Português</option>
+                    <option>English</option>
+                </select>
+                
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div id="main">
+        
+            <h2 class="subtitle-main">Grupo 3</h2>
+            <h3 class="descricao">
+                Sistema de Recomendação de Filmes
+            </h3>
+        </div>
+
+        <div id="favoritos-container">
+            
+                <div>Meus Favoritos</div>
+                <ul id="lista-favoritos"> </ul>
+            
+            
+                <!-- Os filmes favoritos serão exibidos aqui -->
+           
+        </div>
+        
+        
+        
+        
+        <!-- Box Container -->
+        <div id="box-container"> 
+            
+            <div id="filter">
+                <label for="ratingFilter">Recomendação baseada em preferencias anteriores:</label>
+                <select id="ratingFilter">
+                    <option value="0">Todos</option>
+                    <option value="1">1 estrela</option>
+                    <option value="2">2 estrelas</option>
+                    <option value="3">3 estrelas</option>
+                    <option value="4">4 estrelas</option>
+                    <option value="5">5 estrelas</option>
+                </select>
+            </div>
+            <div id="main">
+                <h2 class="subtitle-main">Filmes e Séries</h2>
+                <div id="box-container">
+                    <div class="box-catalogo1">
+                        
+
+                    </div>
+                </div>
+            <!-- Catálogo 1 -->
+            <div class="box-catalogo1">
+
+                <div class="shadow">Series</div>
+                <div id="film">
+                    <div class="card" >
+                        <img src="./assets/capas/drag.webp" class="imagens" alt="Casa do Dragão">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                            
+                        </ul>
+                        <button class="favorite-btn" data-title="Casa do Dragão" onclick="toggleFavorite(this)">Favoritar</button>
+                        
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/capas/stranger.webp" class="imagens" alt="Stranger Things">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                            
+                        </ul>
+                        <button class="favorite-btn" data-title="Stranger Things" onclick="toggleFavorite(this)">Favoritar</button>
+                            
+                        
+                        
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/capas/dead.webp" class="imagens" alt="The Walking Dead">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="The Walking Dead" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/supernatural.webp" class="imagens" alt="Supernatural" >
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Supernatural" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/the100.webp" class="imagens" alt="The100">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="The100" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/bb.webp" class="imagens" alt="Breaking Bad">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Breaking Bad" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="shadow"> Filmes</div>
+            <!-- Catálogo 2 -->
+            <div class="box-catalogo2">
+                <div id="film">
+                    <div class="card">
+                        <img src="./assets/capas/corvo.jpg" class="imagens" alt="O Corvo">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="O Corvo" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/capas/exorcismo.jpg" class="imagens" alt="O Exorcismo">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Exorcismo" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/capas/hellboy.jpg" class="imagens" alt="Hellboy">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Hellboy" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/motoqueiro.jpg" class="imagens" alt="Motoqueiro Fantasma ">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Motoqueiro Fantasma" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/panico.webp" class="imagens" alt="Panico">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Panico" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/capas/z.webp" class="imagens" alt="Guerra Mundial Z">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                        <button class="favorite-btn" data-title="Guerra Mundial Z" onclick="toggleFavorite(this)">Favoritar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Shadows -->
+        <div class="shadow3"></div>
+        
+
+    </div> 
+    <script src="funcoes.js"></script>
+</body>
+</html>
